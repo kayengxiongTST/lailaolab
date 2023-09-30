@@ -1,0 +1,77 @@
+:root {
+	--footer: #261c5d;
+	--footer-copyright: #19124c;
+	--header: #351475;
+	--nav-text: #9b6fab;
+	--white-text: #ffcbe2;
+}
+/* Header Section */
+header a::before {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: var(--white-text);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: width 0.3s ease-in-out;
+}
+header a:hover::before {
+	width: 100%;
+}
+
+header a {
+	color: var(--nav-text);
+	padding-bottom: 5px;
+	position: relative;
+}
+header a.active {
+	color: #fff;
+}
+header a.active::before {
+	color: #fff;
+	font-weight: 500;
+	width: 100%;
+	background-color: var(--nav-text);
+}
+
+.custom-container {
+	max-width: 1110px;
+	margin: auto;
+	padding: 0 20px;
+}
+
+/* footer */
+footer {
+	background-color: var(--footer);
+}
+.copy-footer {
+	background: var(--footer-copyright);
+	color: var(--nav-text);
+}
+
+/* Animation for Slider Text */
+/* This is my Custom CSS */
+@keyframes dropIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+h1.website-title-text {
+	animation: dropIn 1s ease forwards 0.2s;
+}
+
+.website-subtitle-text {
+	animation: dropIn 1s ease forwards 0.4s;
+}
+
+.products-list .bg-img {
+	opacity: 0;
+}

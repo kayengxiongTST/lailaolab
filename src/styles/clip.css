@@ -1,0 +1,77 @@
+:root {
+	--black-text: #3f2626;
+	--secondary-text: #494c4f;
+	--main-clip: #2b1967;
+	--left-clip: #461689;
+	--right-clip: #2b1967;
+}
+.main-clip {
+	background-color: var(--main-clip);
+	clip-path: polygon(0 0, 100% 0, 100% 84%, 80% 100%, 0 83%);
+	width: 100%;
+	height: 450px;
+	position: relative;
+}
+.secondary-clip {
+	background-color: rgb(53, 20, 117);
+	clip-path: polygon(41% 0, 100% 0, 100% 100%, 33% 100%, 0 60%);
+	z-index: 1;
+	width: 30%;
+	height: 450px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	overflow: visible;
+	background: linear-gradient(340deg, rgba(53, 20, 117, 1) 0%, rgb(59, 31, 109) 100%);
+}
+.main-clip .content {
+	position: absolute;
+}
+/* Media Query */
+.custom-image-group-left {
+	left: 20%;
+}
+
+@media only screen and (max-width: 400px) {
+	.custom-image-group-left {
+		left: 1%;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 400px and up) */
+@media only screen and (min-width: 400px) {
+	.custom-image-group-left {
+		left: 4%;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.custom-image-group-left {
+		left: 20%;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.custom-image-group-left {
+		left: 25%;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.custom-image-group-left {
+		left: 35%;
+	}
+}
+@media only screen and (min-width: 1500px) {
+	.custom-image-group-left {
+		left: 45%;
+	}
+}
+@media only screen and (min-width: 1500px) {
+	.custom-image-group-left {
+		left: 50%;
+	}
+}
